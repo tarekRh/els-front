@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { Salaried } from "../../shared/models/salaried.model";
-import { SalariedService } from "../../shared/services/salaried.service";
+import { Component, OnInit } from '@angular/core';
+import { Salaried } from '../../shared/models/salaried.model';
+import { SalariedService } from '../../shared/services/salaried.service';
 
 @Component({
-  selector: "app-salaries",
-  templateUrl: "./salaries.component.html",
-  styleUrls: ["./salaries.component.css"]
+  selector: 'app-salaries',
+  templateUrl: './salaries.component.html',
+  styleUrls: ['./salaries.component.css']
 })
 export class SalariesComponent implements OnInit {
   salaries: Salaried[];
@@ -13,7 +13,7 @@ export class SalariesComponent implements OnInit {
   constructor(private salariedService: SalariedService) {}
 
   ngOnInit() {
-    this.filterSalariesByAttribute("all");
+    this.filterSalariesByAttribute('all');
   }
 
   onChange(selectValue) {
